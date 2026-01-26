@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MareksGym.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+016e857323c9db69ad4998aed111b3d9d96dabf3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+269dd35e507b0c6f1c981fa9057b3b0eb80af3ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("MareksGym.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MareksGym.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

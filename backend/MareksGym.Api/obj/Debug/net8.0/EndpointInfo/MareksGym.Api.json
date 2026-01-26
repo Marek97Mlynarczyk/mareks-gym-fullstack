@@ -16,7 +16,118 @@
           }
         }
       }
+    },
+    "/api/Macros/calculate": {
+      "post": {
+        "tags": [
+          "Macros"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculateMacrosRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculateMacrosRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculateMacrosRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculateMacrosResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculateMacrosResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculateMacrosResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "CalculateMacrosRequest": {
+        "type": "object",
+        "properties": {
+          "sex": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "heightCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "weightKg": {
+            "type": "number",
+            "format": "double"
+          },
+          "activityLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "goal": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalculateMacrosResponse": {
+        "type": "object",
+        "properties": {
+          "bmr": {
+            "type": "number",
+            "format": "double"
+          },
+          "tdee": {
+            "type": "number",
+            "format": "double"
+          },
+          "targetCalories": {
+            "type": "number",
+            "format": "double"
+          },
+          "proteinGrams": {
+            "type": "number",
+            "format": "double"
+          },
+          "carbsGrams": {
+            "type": "number",
+            "format": "double"
+          },
+          "fatGrams": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }
