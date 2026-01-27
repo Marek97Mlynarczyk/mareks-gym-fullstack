@@ -9,6 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<MacroCalculator>();
+builder.Services.AddScoped<MacroCalculator>();
+builder.Services.AddScoped<MacroRequestMapper>();
 
 var app = builder.Build();
 

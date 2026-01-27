@@ -33,3 +33,4 @@ D:\Projekty\mareks-gym-fullstack\backend\MareksGym.Api\obj\Debug\net8.0\refint\M
 D:\Projekty\mareks-gym-fullstack\backend\MareksGym.Api\obj\Debug\net8.0\MareksGym.Api.pdb
 D:\Projekty\mareks-gym-fullstack\backend\MareksGym.Api\obj\Debug\net8.0\MareksGym.Api.genruntimeconfig.cache
 D:\Projekty\mareks-gym-fullstack\backend\MareksGym.Api\obj\Debug\net8.0\ref\MareksGym.Api.dll
+D:\Projekty\mareks-gym-fullstack\backend\MareksGym.Api\obj\Debug\net8.0\MareksGym.Api.sourcelink.json
