@@ -3,6 +3,15 @@
   "WorkspaceRootPath": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\application\\macros\\macrorequestmappertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\application\\macros\\macrocalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,11 +63,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MacroRequestMapperTests.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
+              "RelativeDocumentMoniker": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
+              "RelativeToolTip": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:42:25.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MacroCalculatorTests.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
+              "RelativeDocumentMoniker": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
+              "RelativeToolTip": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:40:34.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\MareksGym.Api.Tests\\UnitTest1.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\MareksGym.Api.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:39:34.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MacroRequestMapper.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroRequestMapper.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroRequestMapper.cs",
@@ -66,12 +114,11 @@
               "RelativeToolTip": "Application\\Macros\\MacroRequestMapper.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAQwCwAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T19:09:40.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T19:09:40.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ValidationResult.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Common\\ValidationResult.cs",
               "RelativeDocumentMoniker": "Application\\Common\\ValidationResult.cs",
@@ -79,12 +126,11 @@
               "RelativeToolTip": "Application\\Common\\ValidationResult.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAA3wBEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T16:51:53.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T16:51:53.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MacrosController.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\MacrosController.cs",
               "RelativeDocumentMoniker": "Controllers\\MacrosController.cs",
@@ -97,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "CalculateMacrosRequest.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
               "RelativeDocumentMoniker": "Contracts\\Macros\\CalculateMacrosRequest.cs",
@@ -109,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "MacroCalculator.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroCalculator.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroCalculator.cs",
@@ -121,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "MacroCalculationResult.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroCalculationResult.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroCalculationResult.cs",
@@ -133,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Enums.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\Enums.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\Enums.cs",
@@ -145,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "MacroCalculationInput.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroCalculationInput.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroCalculationInput.cs",
@@ -157,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -165,12 +211,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T20:18:42.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T20:18:42.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "CalculateMacrosResponse.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosResponse.cs",
               "RelativeDocumentMoniker": "Contracts\\Macros\\CalculateMacrosResponse.cs",
@@ -182,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "HealthController.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\HealthController.cs",
               "RelativeDocumentMoniker": "Controllers\\HealthController.cs",
