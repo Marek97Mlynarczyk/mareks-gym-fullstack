@@ -1,4 +1,6 @@
 using MareksGym.Api.Application.Macros;
+using MareksGym.Api.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<MacroCalculator>();
 builder.Services.AddScoped<MacroCalculator>();
 builder.Services.AddScoped<MacroRequestMapper>();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
