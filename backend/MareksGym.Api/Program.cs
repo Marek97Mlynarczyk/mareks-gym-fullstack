@@ -15,6 +15,7 @@ builder.Services.AddScoped<MacroCalculator>();
 builder.Services.AddScoped<MacroRequestMapper>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<MacroHistoryService>();
 
 var app = builder.Build();
 

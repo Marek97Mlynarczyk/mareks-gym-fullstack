@@ -80,8 +80,8 @@
             "format": "int32"
           },
           "heightCm": {
-            "type": "number",
-            "format": "double"
+            "type": "integer",
+            "format": "int32"
           },
           "weightKg": {
             "type": "number",
