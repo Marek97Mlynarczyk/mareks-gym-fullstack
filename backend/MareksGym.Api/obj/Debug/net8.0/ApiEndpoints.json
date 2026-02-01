@@ -34,5 +34,36 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MareksGym.Api.Controllers.MacrosController",
+    "Method": "History",
+    "RelativePath": "api/Macros/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MareksGym.Api.Contracts.Macros.History.GetMacroHistoryResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

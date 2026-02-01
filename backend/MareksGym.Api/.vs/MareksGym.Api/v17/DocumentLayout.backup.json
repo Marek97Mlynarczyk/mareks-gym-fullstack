@@ -3,32 +3,51 @@
   "WorkspaceRootPath": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrohistoryqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrohistoryqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrorequestmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrorequestmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\macros\\calculatemacrosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\macros\\calculatemacrosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\macros\\history\\getmacrohistoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\macros\\history\\getmacrohistoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrohistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrohistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrocalculationinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrocalculationinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\infrastructure\\persistance\\entities\\macrocalculationhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:infrastructure\\persistance\\entities\\macrocalculationhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\common\\validationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\common\\validationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrorequestmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrorequestmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\application\\macros\\macrocalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrocalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrocalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\infrastructure\\persistance\\entities\\macrocalculationhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:infrastructure\\persistance\\entities\\macrocalculationhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\macros\\calculatemacrosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\macros\\calculatemacrosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrocalculationinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrocalculationinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -37,19 +56,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\infrastructure\\persistance\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:infrastructure\\persistance\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\application\\macros\\macrorequestmappertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\application\\macros\\macrocalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F3B66CA-A043-4211-996C-3A12816F7DF4}|..\\MareksGym.Api.Tests\\MareksGym.Api.Tests.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\common\\validationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\common\\validationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,10 +72,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrocalculationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrocalculationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrocalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrocalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -79,24 +81,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CalculateMacrosRequest.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "RelativeDocumentMoniker": "Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "RelativeToolTip": "Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MacroHistoryQueryService.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroHistoryQueryService.cs",
+              "RelativeDocumentMoniker": "Application\\Macros\\MacroHistoryQueryService.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroHistoryQueryService.cs",
+              "RelativeToolTip": "Application\\Macros\\MacroHistoryQueryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T18:30:23.018Z",
+              "WhenOpened": "2026-02-01T22:32:26.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "GetMacroHistoryResponse.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\History\\GetMacroHistoryResponse.cs",
+              "RelativeDocumentMoniker": "Contracts\\Macros\\History\\GetMacroHistoryResponse.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\History\\GetMacroHistoryResponse.cs",
+              "RelativeToolTip": "Contracts\\Macros\\History\\GetMacroHistoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T22:31:44.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MacroHistoryService.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroHistoryService.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroHistoryService.cs",
@@ -109,32 +124,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "MacroCalculationHistory.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\Entities\\MacroCalculationHistory.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistance\\Entities\\MacroCalculationHistory.cs",
               "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\Entities\\MacroCalculationHistory.cs",
               "RelativeToolTip": "Infrastructure\\Persistance\\Entities\\MacroCalculationHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T18:43:29.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MacroRequestMapperTests.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
-              "RelativeDocumentMoniker": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
-              "RelativeToolTip": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroRequestMapperTests.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:42:25.441Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "MacroCalculatorTests.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
               "RelativeDocumentMoniker": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
@@ -142,36 +145,25 @@
               "RelativeToolTip": "..\\MareksGym.Api.Tests\\Application\\Macros\\MacroCalculatorTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:40:34.767Z"
+              "WhenOpened": "2026-01-28T17:40:34.767Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "..\\MareksGym.Api.Tests\\UnitTest1.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api.Tests\\UnitTest1.cs",
-              "RelativeToolTip": "..\\MareksGym.Api.Tests\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:39:34.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MacroRequestMapper.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroRequestMapper.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroRequestMapper.cs",
               "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroRequestMapper.cs",
               "RelativeToolTip": "Application\\Macros\\MacroRequestMapper.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAvwCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAnwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-27T19:09:40.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "ValidationResult.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Common\\ValidationResult.cs",
               "RelativeDocumentMoniker": "Application\\Common\\ValidationResult.cs",
@@ -179,24 +171,25 @@
               "RelativeToolTip": "Application\\Common\\ValidationResult.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAYwBEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T16:51:53.364Z"
+              "WhenOpened": "2026-01-27T16:51:53.364Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "MacrosController.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\MacrosController.cs",
               "RelativeDocumentMoniker": "Controllers\\MacrosController.cs",
               "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\MacrosController.cs",
               "RelativeToolTip": "Controllers\\MacrosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-26T21:55:06.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
               "Title": "MacroCalculator.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroCalculator.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroCalculator.cs",
@@ -204,24 +197,37 @@
               "RelativeToolTip": "Application\\Macros\\MacroCalculator.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T20:21:10.233Z"
+              "WhenOpened": "2026-01-25T20:21:10.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-25T20:18:42.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "CalculateMacrosRequest.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\Macros\\CalculateMacrosRequest.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
+              "RelativeToolTip": "Contracts\\Macros\\CalculateMacrosRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T18:30:23.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -233,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "MacroCalculationResult.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroCalculationResult.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroCalculationResult.cs",
@@ -245,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "MacroCalculationInput.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroCalculationInput.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\MacroCalculationInput.cs",
@@ -253,12 +259,11 @@
               "RelativeToolTip": "Application\\Macros\\MacroCalculationInput.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T20:19:52.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-25T20:19:52.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistance\\ApplicationDbContext.cs",
@@ -270,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Enums.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\Enums.cs",
               "RelativeDocumentMoniker": "Application\\Macros\\Enums.cs",
@@ -282,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CalculateMacrosResponse.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosResponse.cs",
               "RelativeDocumentMoniker": "Contracts\\Macros\\CalculateMacrosResponse.cs",
@@ -294,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "HealthController.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\HealthController.cs",
               "RelativeDocumentMoniker": "Controllers\\HealthController.cs",
