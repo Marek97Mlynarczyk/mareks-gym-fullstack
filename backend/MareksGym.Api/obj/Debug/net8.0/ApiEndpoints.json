@@ -1,5 +1,41 @@
 [
   {
+    "ContainingType": "MareksGym.Api.Controllers.ExercisesController",
+    "Method": "GetExercises",
+    "RelativePath": "api/Exercises",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "muscleGroup",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "equipment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MareksGym.Api.Controllers.HealthController",
     "Method": "Get",
     "RelativePath": "api/Health",

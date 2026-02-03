@@ -1,3 +1,4 @@
+using MareksGym.Api.Application.Exercises;
 using MareksGym.Api.Application.Macros;
 using MareksGym.Api.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -11,12 +12,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<MacroCalculator>();
-builder.Services.AddScoped<MacroCalculator>();
 builder.Services.AddScoped<MacroRequestMapper>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<MacroHistoryService>();
 builder.Services.AddScoped<MacroHistoryQueryService>();
+builder.Services.AddScoped<ExerciseQueryService>();
+
 
 var app = builder.Build();
 

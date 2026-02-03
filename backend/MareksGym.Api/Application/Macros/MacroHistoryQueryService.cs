@@ -22,6 +22,7 @@ public sealed class MacroHistoryQueryService
         var totalCount = await _db.MacroCalculationHistories.CountAsync(ct);
 
         var items = await _db.MacroCalculationHistories
+            .AsNoTracking() // Don't track entities I'm not updating
             .OrderByDescending(x => x.CreatedAtUtc)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
