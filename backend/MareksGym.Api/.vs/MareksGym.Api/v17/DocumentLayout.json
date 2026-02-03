@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\controllers\\exercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:controllers\\exercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\exercises\\exercisequeryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\exercises\\exercisequeryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\exercises\\getexercisespageresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\exercises\\getexercisespageresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\controllers\\exercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:controllers\\exercisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\exercises\\getexercisebyidresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\exercises\\getexercisebyidresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\application\\macros\\macrohistoryqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:application\\macros\\macrohistoryqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\exercises\\getexercisesresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\exercises\\getexercisesresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Migrations\\20260203170345_AddExercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260203170345_AddExercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\infrastructure\\persistance\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:infrastructure\\persistance\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\infrastructure\\persistance\\entities\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:infrastructure\\persistance\\entities\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\contracts\\macros\\calculatemacrosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:contracts\\macros\\calculatemacrosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|d:\\projekty\\mareks-gym-fullstack\\backend\\mareksgym.api\\infrastructure\\persistance\\devdataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFFF158-65A9-44ED-9515-5EC26FFE4AE3}|MareksGym.Api.csproj|solutionrelative:infrastructure\\persistance\\devdataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,110 +30,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ExercisesController.cs",
               "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\ExercisesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ExercisesController.cs",
               "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Controllers\\ExercisesController.cs",
               "RelativeToolTip": "Controllers\\ExercisesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:11:36.589Z",
+              "WhenOpened": "2026-02-03T17:36:36.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExerciseQueryService.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Exercises\\ExerciseQueryService.cs",
-              "RelativeDocumentMoniker": "Application\\Exercises\\ExerciseQueryService.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Exercises\\ExerciseQueryService.cs",
-              "RelativeToolTip": "Application\\Exercises\\ExerciseQueryService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwFkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GetExerciseByIdResponse.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Exercises\\GetExerciseByIdResponse.cs",
+              "RelativeDocumentMoniker": "Contracts\\Exercises\\GetExerciseByIdResponse.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Exercises\\GetExerciseByIdResponse.cs",
+              "RelativeToolTip": "Contracts\\Exercises\\GetExerciseByIdResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:07:10.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetExercisesPageResponse.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Exercises\\GetExercisesPageResponse.cs",
-              "RelativeDocumentMoniker": "Contracts\\Exercises\\GetExercisesPageResponse.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Exercises\\GetExercisesPageResponse.cs",
-              "RelativeToolTip": "Contracts\\Exercises\\GetExercisesPageResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:06:27.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetExercisesResponse.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Exercises\\GetExercisesResponse.cs",
-              "RelativeDocumentMoniker": "Contracts\\Exercises\\GetExercisesResponse.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Exercises\\GetExercisesResponse.cs",
-              "RelativeToolTip": "Contracts\\Exercises\\GetExercisesResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:06:03.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20260203170345_AddExercises.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Migrations\\20260203170345_AddExercises.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260203170345_AddExercises.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Migrations\\20260203170345_AddExercises.cs",
-              "RelativeToolTip": "Migrations\\20260203170345_AddExercises.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T17:03:45.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Exercise.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\Entities\\Exercise.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\Entities\\Exercise.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\Entities\\Exercise.cs",
-              "RelativeToolTip": "Infrastructure\\Persistance\\Entities\\Exercise.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T16:57:13.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Persistance\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAACFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T00:26:34.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MacroHistoryQueryService.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroHistoryQueryService.cs",
-              "RelativeDocumentMoniker": "Application\\Macros\\MacroHistoryQueryService.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Macros\\MacroHistoryQueryService.cs",
-              "RelativeToolTip": "Application\\Macros\\MacroHistoryQueryService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T22:32:26.471Z",
+              "WhenOpened": "2026-02-03T17:33:12.692Z",
               "EditorCaption": ""
             },
             {
@@ -164,22 +66,36 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-25T20:18:42.306Z",
+              "WhenOpened": "2026-02-03T17:29:51.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CalculateMacrosRequest.cs",
-              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "RelativeDocumentMoniker": "Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "RelativeToolTip": "Contracts\\Macros\\CalculateMacrosRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "DevDataSeeder.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\DevDataSeeder.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\DevDataSeeder.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Infrastructure\\Persistance\\DevDataSeeder.cs",
+              "RelativeToolTip": "Infrastructure\\Persistance\\DevDataSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T18:30:23.018Z"
+              "WhenOpened": "2026-02-03T17:29:06.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExerciseQueryService.cs",
+              "DocumentMoniker": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Exercises\\ExerciseQueryService.cs",
+              "RelativeDocumentMoniker": "Application\\Exercises\\ExerciseQueryService.cs",
+              "ToolTip": "D:\\Projekty\\mareks-gym-fullstack\\backend\\MareksGym.Api\\Application\\Exercises\\ExerciseQueryService.cs",
+              "RelativeToolTip": "Application\\Exercises\\ExerciseQueryService.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T17:07:10.778Z",
+              "EditorCaption": ""
             }
           ]
         }

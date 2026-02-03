@@ -36,6 +36,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MareksGym.Api.Controllers.ExercisesController",
+    "Method": "GetExerciseById",
+    "RelativePath": "api/Exercises/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MareksGym.Api.Controllers.HealthController",
     "Method": "Get",
     "RelativePath": "api/Health",

@@ -28,4 +28,17 @@ public class ExercisesController : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpGet("{id:int}")]
+    public async Task<IActionResult> GetExerciseById(int id, CancellationToken ct)
+    {
+        var result = await _queryService.GetExerciseByIdAsync(id, ct);
+
+        if (result is null)
+        {
+            return NotFound();
+        }
+
+        return Ok(result);
+    }
 }

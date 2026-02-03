@@ -1,5 +1,6 @@
 ﻿using MareksGym.Api.Contracts.Exercises;
 using MareksGym.Api.Infrastructure.Persistence;
+using MareksGym.Api.Contracts.Exercises;
 using Microsoft.EntityFrameworkCore;
 
 namespace MareksGym.Api.Application.Exercises;
@@ -86,5 +87,27 @@ public class ExerciseQueryService
             pageSize,
             totalCount
         );
+    }
+
+    public async Task<GetExerciseByIdResponse?> GetExerciseByIdAsync(int id, CancellationToken cancellationToken)
+    {
+        if (id <= 0)
+        {
+            return null;
+        }
+
+        var exercise = await _dbContext.Exercises
+            .AsNoTracking()
+            .Where(x => x.Id == id)
+            .Select(x => new GetExerciseByIdResponse(
+                x.Id,
+                x.Name,
+                x.Description,
+                x.MuscleGroup,
+                x.Equipment
+            ))
+            .FirstOrDefaultAsync(cancellationToken);
+
+        return exercise;
     }
 }

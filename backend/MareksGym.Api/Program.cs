@@ -27,6 +27,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    
+    // Seed development data so the API is usable in Swagger
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    DevDataSeeder.SeedExercises(db);
 }
 
 app.UseHttpsRedirection();
