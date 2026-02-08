@@ -1,4 +1,6 @@
 ﻿using MareksGym.Api.Application.Exercises;
+using MareksGym.Api.Application.Exercises.Create;
+using MareksGym.Api.Contracts.Exercises.Create;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MareksGym.Api.Controllers;
@@ -8,10 +10,14 @@ namespace MareksGym.Api.Controllers;
 public class ExercisesController : ControllerBase
 {
     private readonly ExerciseQueryService _queryService;
+    private readonly ExerciseCreateService _createService;
+    private readonly ExerciseSearchStoredProcEfService _searchSpEfService;
 
-    public ExercisesController(ExerciseQueryService queryService)
+    public ExercisesController(ExerciseQueryService queryService, ExerciseCreateService createService, ExerciseSearchStoredProcEfService searchSpEfService)
     {
         _queryService = queryService;
+        _createService = createService;
+        _searchSpEfService = searchSpEfService;
     }
 
     [HttpGet]
@@ -41,4 +47,33 @@ public class ExercisesController : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> CreateExercise([FromBody] CreateExerciseRequest? request, CancellationToken ct)
+    {
+        var (validation, created) = await _createService.CreateAsync(request, ct);
+
+        if (!validation.IsValid || created is null)
+        {
+            return BadRequest(new { errors = validation.Errors });
+        }
+
+        return CreatedAtAction(nameof(GetExerciseById), new { id = created.Id }, created);
+    }
+
+    [HttpGet("search-sp-ef")]
+    public async Task<IActionResult> SearchExercisesStoredProcEf(
+    [FromQuery] string? search,
+    [FromQuery] string? muscleGroup,
+    [FromQuery] string? equipment,
+    [FromQuery] int page = 1,
+    [FromQuery] int pageSize = 20,
+    CancellationToken ct = default)
+    {
+        var result = await _searchSpEfService.SearchAsync(
+            search, muscleGroup, equipment, page, pageSize, ct);
+
+        return Ok(result);
+    }
+
 }
