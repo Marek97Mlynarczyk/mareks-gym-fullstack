@@ -11,7 +11,7 @@ public class CreateExerciseValidator
 
         if (request is null)
         {
-            result.AddError(string.Empty, "Request body is required.");
+            result.AddError("request", "Request body is required.");
             return result;
         }
 

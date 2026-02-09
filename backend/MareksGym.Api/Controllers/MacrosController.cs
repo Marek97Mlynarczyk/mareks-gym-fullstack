@@ -33,7 +33,7 @@ public class MacrosController : ControllerBase
         CancellationToken ct)
     {
         if (!_mapper.TryMap(request, out var input, out var validation))
-            return BadRequest(validation);
+            return BadRequest(new { errors = validation.Errors });
 
         var result = _calculator.Calculate(input);
 
