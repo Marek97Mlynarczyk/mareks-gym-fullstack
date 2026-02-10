@@ -9,6 +9,7 @@
       "MareksGym.Api.Tests/1.0.0": {
         "dependencies": {
           "MareksGym.Api": "1.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.23",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "coverlet.collector": "6.0.0",
           "xunit": "2.5.3",
@@ -155,6 +156,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/8.0.23": {},
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.23": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.23"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "8.0.23.0",
+            "fileVersion": "8.0.2325.60904"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.23": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.23",
@@ -1648,6 +1660,13 @@
       "sha512": "sha512-OJffn34WQkZRtyleqlCrf5BstqYrgo0ZvVgs4Kx4/pbtWdk5VoTrE7vf5ni+a5Aq1/5SGOt4/TY8RuGfxYjADw==",
       "path": "microsoft.entityframeworkcore.analyzers/8.0.23",
       "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.23.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sOcZYsy4QaBnmw+UX6Ar3PB8ldvAcIhCEhspgC+bJ4mVzTieZdgMQNzHmba0Rpg6YixHgbwpDH8ffyCA4jbLxA==",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.23",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.8.0.23.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.23": {
       "type": "package",
