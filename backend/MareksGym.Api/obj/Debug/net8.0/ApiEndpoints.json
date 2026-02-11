@@ -69,6 +69,43 @@
   },
   {
     "ContainingType": "MareksGym.Api.Controllers.ExercisesController",
+    "Method": "UpdateExercise",
+    "RelativePath": "api/Exercises/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MareksGym.Api.Contracts.Exercises.Update.UpdateExerciseRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MareksGym.Api.Controllers.ExercisesController",
+    "Method": "DeleteExercise",
+    "RelativePath": "api/Exercises/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MareksGym.Api.Controllers.ExercisesController",
     "Method": "SearchExercisesStoredProcEf",
     "RelativePath": "api/Exercises/search-sp-ef",
     "HttpMethod": "GET",

@@ -1,5 +1,7 @@
 using MareksGym.Api.Application.Exercises;
 using MareksGym.Api.Application.Exercises.Create;
+using MareksGym.Api.Application.Exercises.Delete;
+using MareksGym.Api.Application.Exercises.Update;
 using MareksGym.Api.Application.Macros;
 using MareksGym.Api.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,9 @@ builder.Services.AddScoped<ExerciseQueryService>();
 builder.Services.AddScoped<CreateExerciseValidator>();
 builder.Services.AddScoped<ExerciseCreateService>();
 builder.Services.AddScoped<ExerciseSearchStoredProcEfService>();
-
+builder.Services.AddScoped<UpdateExerciseValidator>();
+builder.Services.AddScoped<ExerciseUpdateService>();
+builder.Services.AddScoped<ExerciseDeleteService>();
 
 var app = builder.Build();
 
