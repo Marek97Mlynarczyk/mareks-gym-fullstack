@@ -7,6 +7,7 @@ using MareksGym.Api.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var corsPolicyName = "FrontendDev";
 
 // Add services to the container.
 
@@ -27,6 +28,17 @@ builder.Services.AddScoped<UpdateExerciseValidator>();
 builder.Services.AddScoped<ExerciseUpdateService>();
 builder.Services.AddScoped<ExerciseDeleteService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(corsPolicyName, policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -44,6 +56,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(corsPolicyName);
 
 app.MapControllers();
 
