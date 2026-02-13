@@ -7,10 +7,3 @@ export type Exercise = {
   muscleGroup: string | null;
   equipment: string | null;
 };
-
-export type PagedResult<T> = {
-  items: T[];
-  page: number;
-  pageSize: number;
-  totalCount: number;
-};

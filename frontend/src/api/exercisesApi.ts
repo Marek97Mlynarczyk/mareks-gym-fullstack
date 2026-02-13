@@ -1,20 +1,9 @@
-import type { Exercise, PagedResult } from "../types/exercise";
+import { httpGet } from "./http";
+import type { Exercise } from "../types/exercise";
+import type { PagedResult } from "../types/pagedResult";
 
-// I keep the API base URL in one constant so I don't repeat it everywhere
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "https://localhost:7099";
-
-// I keep API calls in this file so my React components don't contain HTTP details
-export async function getExercises(page: number, pageSize: number): Promise<PagedResult<Exercise>> {
-  const url = `${API_BASE_URL}/api/Exercises?page=${page}&pageSize=${pageSize}`;
-
-  // I call the backend endpoint and check if it succeeded
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    // I throw an error so the UI can show something helpful
-    throw new Error(`Failed to fetch exercises (HTTP ${response.status})`);
-  }
-
-  // I parse JSON into the shape my UI expects
-  return (await response.json()) as PagedResult<Exercise>;
+// I keep the endpoint paths here so components stay clean
+export async function getExercises(page: number, pageSize: number) {
+  const query = `?page=${page}&pageSize=${pageSize}`;
+  return await httpGet<PagedResult<Exercise>>(`/api/Exercises${query}`);
 }
