@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Exercise } from "./types/exercise";
 import { getExercises } from "./api/exercisesApi";
+import { useDebouncedValue } from "./hooks/useDebouncedValue";
 
 function App() {
   // I store the exercises I fetch from the backend
@@ -8,11 +9,14 @@ function App() {
 
   // I track total count so I can build paging controls
   const [totalCount, setTotalCount] = useState(0);
-
+  
   // I store UI query inputs
   const [search, setSearch] = useState("");
   const [muscleGroup, setMuscleGroup] = useState("");
   const [equipment, setEquipment] = useState("");
+  
+  // I debounce search so I do not hit the API on every keypress
+  const debouncedSearch = useDebouncedValue(search, 400);
 
   // I store paging state
   const [page, setPage] = useState(1);
@@ -24,14 +28,12 @@ function App() {
   // I store possible error message if something fails
   const [error, setError] = useState<string | null>(null);
 
-  
   // I compute total pages from backend totalCount
   const totalPages = useMemo(() => {
     if (totalCount <= 0) return 1;
     return Math.max(1, Math.ceil(totalCount / pageSize));
   }, [totalCount, pageSize]);
 
-  // I decide button enabled/disabled states
   const canGoPrev = page > 1;
   const canGoNext = page < totalPages;
 
@@ -46,7 +48,7 @@ function App() {
 
         const result = await getExercises(
           {
-            search,
+            search: debouncedSearch,
             muscleGroup,
             equipment,
             page,
@@ -78,7 +80,7 @@ function App() {
     return () => {
       abortController.abort();
     };
-  }, [search, muscleGroup, equipment, page, pageSize]);
+  }, [debouncedSearch, muscleGroup, equipment, page, pageSize]);
 
   function handleSearchChange(value: string) {
     setSearch(value);
