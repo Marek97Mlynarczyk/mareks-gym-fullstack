@@ -1,4 +1,4 @@
-import { httpGet } from "./http";
+import { httpGet, httpPost, httpDelete } from "./http";
 import type { Exercise } from "../types/exercise";
 import type { PagedResult } from "../types/pagedResult";
 
@@ -30,4 +30,24 @@ export async function getExercises(params: GetExercisesParams, signal?: AbortSig
   query.set("pageSize", String(params.pageSize));
 
   return await httpGet<PagedResult<Exercise>>(`/api/exercises?${query.toString()}`, signal);
+}
+
+export type CreateExerciseRequest = {
+  name: string;
+  description?: string | null;
+  muscleGroup?: string | null;
+  equipment?: string | null;
+};
+
+export async function createExercise(
+  request: CreateExerciseRequest
+) {
+  return await httpPost<any, CreateExerciseRequest>(
+    "/api/exercises",
+    request
+  );
+}
+
+export async function deleteExercise(id: number) {
+  return await httpDelete(`/api/exercises/${id}`);
 }
