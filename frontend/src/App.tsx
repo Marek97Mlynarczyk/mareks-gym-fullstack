@@ -74,7 +74,8 @@ function App() {
     setNewDescription("");
     setNewMuscleGroup("");
     setNewEquipment("");
-
+    
+    setPage(1);
     setRefreshKey((k) => k + 1);
 
   } catch (err) {
@@ -310,7 +311,7 @@ function App() {
         {!loading && !error && (
           <>
             <p style={{ marginBottom: 12 }}>
-              Showing page {page} of {totalPages} — Total: {totalCount}
+              Showing page {page} of {totalPages} - Total: {totalCount}
             </p>
 
             <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
@@ -322,18 +323,32 @@ function App() {
               </button>
             </div>
 
-            <ul>
-              {items.map((exercise) => (
-                <li key={exercise.id}>
-                  {exercise.name} - {exercise.muscleGroup ?? "N/A"} - {exercise.equipment ?? "N/A"}
-                   <button onClick={() => handleDelete(exercise.id)} disabled={loading} style={{ marginLeft: 8 }}>
-                    Delete
+            {items.length === 0 && (
+              <p style={{ marginTop: 12 }}>
+                No exercises found. Try clearing filters or changing your search.
+              </p>
+            )}
+
+            {items.length > 0 && (
+              <ul>
+                {items.map((exercise) => (
+                  <li key={exercise.id}>
+                    {exercise.name} - {exercise.muscleGroup ?? "N/A"} -{" "}
+                    {exercise.equipment ?? "N/A"}
+                    <button
+                      onClick={() => handleDelete(exercise.id)}
+                      disabled={loading}
+                      style={{ marginLeft: 8 }}
+                    >
+                      Delete
                     </button>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            )}
           </>
         )}
+
       </div>
     </div>
   );
