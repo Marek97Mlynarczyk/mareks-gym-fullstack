@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Exercise } from "./types/exercise";
-import { createExercise, deleteExercise, getExercises } from "./api/exercisesApi";
+import { createExercise, deleteExercise, updateExercise, getExercises } from "./api/exercisesApi";
 import { useDebouncedValue } from "./hooks/useDebouncedValue";
 
 function App() {
@@ -9,12 +9,12 @@ function App() {
 
   // I track total count so I can build paging controls
   const [totalCount, setTotalCount] = useState(0);
-  
+
   // I store UI query inputs
   const [search, setSearch] = useState("");
   const [muscleGroup, setMuscleGroup] = useState("");
   const [equipment, setEquipment] = useState("");
-  
+
   // I debounce search so I do not hit the API on every keypress
   const debouncedSearch = useDebouncedValue(search, 400);
 
@@ -53,44 +53,59 @@ function App() {
   // I track create request state so I can disable the button
   const [creating, setCreating] = useState(false);
 
+  // I track which exercise I am editing
+  const [editingId, setEditingId] = useState<number | null>(null);
+
+  // I store edit form inputs
+  const [editName, setEditName] = useState("");
+  const [editDescription, setEditDescription] = useState("");
+  const [editMuscleGroup, setEditMuscleGroup] = useState("");
+  const [editEquipment, setEditEquipment] = useState("");
+
+  // I store backend validation errors from update
+  const [updateErrors, setUpdateErrors] = useState<Record<string, string[]> | null>(null);
+
+  // I track update request state so I can disable buttons
+  const [updating, setUpdating] = useState(false);
+
   // I create a new exercise using the API and refresh the list
   async function handleCreate() {
-  try {
-    setCreateErrors(null);
-    setCreating(true);
+    try {
+      setCreateErrors(null);
+      setCreating(true);
 
-    await createExercise({
-      name: newName,
-      description: newDescription.trim().length > 0 ? newDescription : null,
-      muscleGroup: newMuscleGroup.trim().length > 0 ? newMuscleGroup : null,
-      equipment: newEquipment.trim().length > 0 ? newEquipment : null,
-    });
-    
-    // I clear errors after successful create
-    setCreateErrors(null);
+      await createExercise({
+        name: newName.trim(),
+        description: newDescription.trim().length > 0 ? newDescription : null,
+        muscleGroup: newMuscleGroup.trim().length > 0 ? newMuscleGroup : null,
+        equipment: newEquipment.trim().length > 0 ? newEquipment : null,
+      });
 
-    // I reset the form after successful create
-    setNewName("");
-    setNewDescription("");
-    setNewMuscleGroup("");
-    setNewEquipment("");
-    
-    setPage(1);
-    setRefreshKey((k) => k + 1);
+      // I clear errors after successful create
+      setCreateErrors(null);
 
-  } catch (err) {
-    const maybeErr = err as any;
-    if (maybeErr?.errors) {
-      setCreateErrors(maybeErr.errors as Record<string, string[]>);
-    } else if (maybeErr instanceof Error) {
-      setCreateErrors({ general: [maybeErr.message] });
-    } else {
-      setCreateErrors({ general: ["Unknown error occurred."] });
+      // I reset the form after successful create
+      setNewName("");
+      setNewDescription("");
+      setNewMuscleGroup("");
+      setNewEquipment("");
+
+      setPage(1);
+      setRefreshKey((k) => k + 1);
+
+    } catch (err) {
+      const maybeErr = err as any;
+      if (maybeErr?.errors) {
+        setCreateErrors(maybeErr.errors as Record<string, string[]>);
+      } else if (maybeErr instanceof Error) {
+        setCreateErrors({ general: [maybeErr.message] });
+      } else {
+        setCreateErrors({ general: ["Unknown error occurred."] });
+      }
+    } finally {
+      setCreating(false);
     }
-  } finally {
-    setCreating(false);
   }
-}
 
   // I delete an exercise and refresh the list
   async function handleDelete(id: number) {
@@ -111,8 +126,59 @@ function App() {
     }
   }
 
-    // I fetch exercises when query or paging changes
-    useEffect(() => {
+  // I start editing and populate the edit form
+  function startEdit(exercise: Exercise) {
+    setUpdateErrors(null);
+    setEditingId(exercise.id);
+    setEditName(exercise.name);
+    setEditDescription(exercise.description ?? "");
+    setEditMuscleGroup(exercise.muscleGroup ?? "");
+    setEditEquipment(exercise.equipment ?? "");
+  }
+
+  // I cancel editing and clear edit state
+  function cancelEdit() {
+    setUpdateErrors(null);
+    setEditingId(null);
+    setEditName("");
+    setEditDescription("");
+    setEditMuscleGroup("");
+    setEditEquipment("");
+  }
+
+  // I save edits using the API and refresh the list
+  async function handleUpdate() {
+    if (editingId === null) return;
+
+    try {
+      setUpdating(true);
+      setUpdateErrors(null);
+
+      await updateExercise(editingId, {
+        name: editName.trim(),
+        description: editDescription.trim().length > 0 ? editDescription : null,
+        muscleGroup: editMuscleGroup.trim().length > 0 ? editMuscleGroup : null,
+        equipment: editEquipment.trim().length > 0 ? editEquipment : null,
+      });
+
+      cancelEdit();
+      setRefreshKey((k) => k + 1);
+    } catch (err) {
+      const maybeErr = err as any;
+      if (maybeErr?.errors) {
+        setUpdateErrors(maybeErr.errors as Record<string, string[]>);
+      } else if (maybeErr instanceof Error) {
+        setUpdateErrors({ general: [maybeErr.message] });
+      } else {
+        setUpdateErrors({ general: ["Unknown error occurred."] });
+      }
+    } finally {
+      setUpdating(false);
+    }
+  }
+
+  // I fetch exercises when query or paging changes
+  useEffect(() => {
     const abortController = new AbortController();
 
     async function loadExercises() {
@@ -134,7 +200,7 @@ function App() {
         setItems(result.items);
         setTotalCount(result.totalCount);
       } catch (e) {
-         if (abortController.signal.aborted) return;
+        if (abortController.signal.aborted) return;
 
         if (e instanceof Error) {
           setError(e.message);
@@ -180,7 +246,7 @@ function App() {
     if (!canGoNext) return;
     setPage((p) => p + 1);
   }
-  
+
   return (
     <div style={{ padding: 24 }}>
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -232,73 +298,73 @@ function App() {
 
         <h2 style={{ marginBottom: 12 }}>Create Exercise</h2>
 
-<div
-  style={{
-    display: "flex",
-    gap: 12,
-    flexWrap: "wrap",
-    alignItems: "flex-end",
-    marginBottom: 12,
-  }}
->
-  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-    <label htmlFor="newName">Name</label>
-    <input
-      id="newName"
-      value={newName}
-      onChange={(e) => setNewName(e.target.value)}
-      placeholder="e.g. Barbell Bench Press"
-      style={{ padding: 8, width: 260 }}
-    />
-  </div>
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            flexWrap: "wrap",
+            alignItems: "flex-end",
+            marginBottom: 12,
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <label htmlFor="newName">Name</label>
+            <input
+              id="newName"
+              value={newName}
+              onChange={(e) => setNewName(e.target.value)}
+              placeholder="e.g. Barbell Bench Press"
+              style={{ padding: 8, width: 260 }}
+            />
+          </div>
 
-  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-    <label htmlFor="newMuscleGroup">Muscle group</label>
-    <input
-      id="newMuscleGroup"
-      value={newMuscleGroup}
-      onChange={(e) => setNewMuscleGroup(e.target.value)}
-      placeholder="e.g. Chest"
-      style={{ padding: 8, width: 180 }}
-    />
-  </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <label htmlFor="newMuscleGroup">Muscle group</label>
+            <input
+              id="newMuscleGroup"
+              value={newMuscleGroup}
+              onChange={(e) => setNewMuscleGroup(e.target.value)}
+              placeholder="e.g. Chest"
+              style={{ padding: 8, width: 180 }}
+            />
+          </div>
 
-  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-    <label htmlFor="newEquipment">Equipment</label>
-    <input
-      id="newEquipment"
-      value={newEquipment}
-      onChange={(e) => setNewEquipment(e.target.value)}
-      placeholder="e.g. Barbell"
-      style={{ padding: 8, width: 180 }}
-    />
-  </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <label htmlFor="newEquipment">Equipment</label>
+            <input
+              id="newEquipment"
+              value={newEquipment}
+              onChange={(e) => setNewEquipment(e.target.value)}
+              placeholder="e.g. Barbell"
+              style={{ padding: 8, width: 180 }}
+            />
+          </div>
 
-  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-    <label htmlFor="newDescription">Description</label>
-    <input
-      id="newDescription"
-      value={newDescription}
-      onChange={(e) => setNewDescription(e.target.value)}
-      placeholder="optional"
-      style={{ padding: 8, width: 260 }}
-    />
-  </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <label htmlFor="newDescription">Description</label>
+            <input
+              id="newDescription"
+              value={newDescription}
+              onChange={(e) => setNewDescription(e.target.value)}
+              placeholder="optional"
+              style={{ padding: 8, width: 260 }}
+            />
+          </div>
 
-  <button onClick={handleCreate} disabled={creating || newName.trim().length === 0}>
-    {creating ? "Creating..." : "Create"}
-  </button>
-</div>
+          <button onClick={handleCreate} disabled={creating || newName.trim().length === 0}>
+            {creating ? "Creating..." : "Create"}
+          </button>
+        </div>
 
-{createErrors && (
-  <div style={{ color: "red", marginBottom: 16 }}>
-    {Object.entries(createErrors).map(([field, messages]) => (
-      <div key={field}>
-        <strong>{field}</strong>: {messages.join(", ")}
-      </div>
-    ))}
-  </div>
-)}
+        {createErrors && (
+          <div style={{ color: "red", marginBottom: 16 }}>
+            {Object.entries(createErrors).map(([field, messages]) => (
+              <div key={field}>
+                <strong>{field}</strong>: {messages.join(", ")}
+              </div>
+            ))}
+          </div>
+        )}
 
 
         {/* I show loading only while I'm waiting for the API */}
@@ -314,13 +380,82 @@ function App() {
               Showing page {page} of {totalPages} - Total: {totalCount}
             </p>
 
-            <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-              <button onClick={goPrev} disabled={!canGoPrev}>
-                Prev
-              </button>
-              <button onClick={goNext} disabled={!canGoNext}>
-                Next
-              </button>
+            {/* I keep edit panel above paging so the layout stays readable */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 12 }}>
+              {editingId !== null && (
+                <div style={{ border: "1px solid #ccc", padding: 12 }}>
+                  <h3 style={{ marginTop: 0 }}>Edit Exercise</h3>
+
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "flex-end" }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      <label htmlFor="editName">Name</label>
+                      <input
+                        id="editName"
+                        value={editName}
+                        onChange={(e) => setEditName(e.target.value)}
+                        style={{ padding: 8, width: 260 }}
+                      />
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      <label htmlFor="editMuscleGroup">Muscle group</label>
+                      <input
+                        id="editMuscleGroup"
+                        value={editMuscleGroup}
+                        onChange={(e) => setEditMuscleGroup(e.target.value)}
+                        style={{ padding: 8, width: 180 }}
+                      />
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      <label htmlFor="editEquipment">Equipment</label>
+                      <input
+                        id="editEquipment"
+                        value={editEquipment}
+                        onChange={(e) => setEditEquipment(e.target.value)}
+                        style={{ padding: 8, width: 180 }}
+                      />
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      <label htmlFor="editDescription">Description</label>
+                      <input
+                        id="editDescription"
+                        value={editDescription}
+                        onChange={(e) => setEditDescription(e.target.value)}
+                        style={{ padding: 8, width: 260 }}
+                      />
+                    </div>
+
+                    <button onClick={handleUpdate} disabled={updating || editName.trim().length === 0}>
+                      {updating ? "Saving.." : "Save"}
+                    </button>
+
+                    <button onClick={cancelEdit} disabled={updating}>
+                      Cancel
+                    </button>
+                  </div>
+
+                  {updateErrors && (
+                    <div style={{ color: "red", marginTop: 12 }}>
+                      {Object.entries(updateErrors).map(([field, messages]) => (
+                        <div key={field}>
+                          <strong>{field}</strong>: {messages.join(", ")}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <div style={{ display: "flex", gap: 8 }}>
+                <button onClick={goPrev} disabled={!canGoPrev}>
+                  Prev
+                </button>
+                <button onClick={goNext} disabled={!canGoNext}>
+                  Next
+                </button>
+              </div>
             </div>
 
             {items.length === 0 && (
@@ -333,11 +468,17 @@ function App() {
               <ul>
                 {items.map((exercise) => (
                   <li key={exercise.id}>
-                    {exercise.name} - {exercise.muscleGroup ?? "N/A"} -{" "}
-                    {exercise.equipment ?? "N/A"}
+                    {exercise.name} - {exercise.muscleGroup ?? "N/A"} - {exercise.equipment ?? "N/A"}
+                    <button
+                      onClick={() => startEdit(exercise)}
+                      disabled={loading || updating}
+                      style={{ marginLeft: 8 }}
+                    >
+                      Edit
+                    </button>
                     <button
                       onClick={() => handleDelete(exercise.id)}
-                      disabled={loading}
+                      disabled={loading || updating}
                       style={{ marginLeft: 8 }}
                     >
                       Delete

@@ -56,3 +56,25 @@ export async function httpDelete(path: string): Promise<void> {
     throw new Error(`HTTP ${response.status}`);
   }
 }
+
+// I use this helper for PUT requests so update behavior is consistent
+export async function httpPut<TResponse, TRequest>(
+  path: string,
+  body: TRequest
+): Promise<TResponse> {
+  const response = await fetch(`${API_BASE_URL}${path}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!response.ok) {
+    const data = await response.json().catch(() => null);
+    throw data ?? new Error(`HTTP ${response.status}`);
+  }
+
+  return (await response.json()) as TResponse;
+}

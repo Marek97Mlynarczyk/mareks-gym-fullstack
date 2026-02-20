@@ -1,4 +1,4 @@
-import { httpGet, httpPost, httpDelete } from "./http";
+import { httpGet, httpPost, httpDelete, httpPut } from "./http";
 import type { Exercise } from "../types/exercise";
 import type { PagedResult } from "../types/pagedResult";
 
@@ -8,6 +8,20 @@ export type GetExercisesParams = {
   equipment?: string;
   page: number;
   pageSize: number;
+};
+
+export type CreateExerciseRequest = {
+  name: string;
+  description?: string | null;
+  muscleGroup?: string | null;
+  equipment?: string | null;
+};
+
+export type UpdateExerciseRequest = {
+  name: string;
+  description?: string | null;
+  muscleGroup?: string | null;
+  equipment?: string | null;
 };
 
 // I keep the endpoint paths here so components stay clean
@@ -32,13 +46,6 @@ export async function getExercises(params: GetExercisesParams, signal?: AbortSig
   return await httpGet<PagedResult<Exercise>>(`/api/exercises?${query.toString()}`, signal);
 }
 
-export type CreateExerciseRequest = {
-  name: string;
-  description?: string | null;
-  muscleGroup?: string | null;
-  equipment?: string | null;
-};
-
 export async function createExercise(
   request: CreateExerciseRequest
 ) {
@@ -50,4 +57,8 @@ export async function createExercise(
 
 export async function deleteExercise(id: number) {
   return await httpDelete(`/api/exercises/${id}`);
+}
+
+export async function updateExercise(id: number, request: UpdateExerciseRequest) {
+  return await httpPut<Exercise, UpdateExerciseRequest>(`/api/exercises/${id}`, request);
 }
