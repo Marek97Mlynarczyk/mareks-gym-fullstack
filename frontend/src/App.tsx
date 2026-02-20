@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Exercise } from "./types/exercise";
-import { createExercise, getExercises } from "./api/exercisesApi";
+import { createExercise, deleteExercise, getExercises } from "./api/exercisesApi";
 import { useDebouncedValue } from "./hooks/useDebouncedValue";
 
 function App() {
@@ -65,6 +65,9 @@ function App() {
       muscleGroup: newMuscleGroup.trim().length > 0 ? newMuscleGroup : null,
       equipment: newEquipment.trim().length > 0 ? newEquipment : null,
     });
+    
+    // I clear errors after successful create
+    setCreateErrors(null);
 
     // I reset the form after successful create
     setNewName("");
@@ -72,8 +75,7 @@ function App() {
     setNewMuscleGroup("");
     setNewEquipment("");
 
-    setPage(1);
-    setRefreshKey(refreshKey + 1);
+    setRefreshKey((k) => k + 1);
 
   } catch (err) {
     const maybeErr = err as any;
@@ -89,7 +91,26 @@ function App() {
   }
 }
 
-  // I use useEffect so this runs once when the component loads
+  // I delete an exercise and refresh the list
+  async function handleDelete(id: number) {
+    const confirmed = window.confirm("Do you want to delete this exercise?");
+    if (!confirmed) return;
+
+    try {
+      await deleteExercise(id);
+
+      // I refresh the list after delete
+      setRefreshKey((k) => k + 1);
+    } catch (e) {
+      if (e instanceof Error) {
+        alert(e.message);
+      } else {
+        alert("Unknown error occurred.");
+      }
+    }
+  }
+
+    // I fetch exercises when query or paging changes
     useEffect(() => {
     const abortController = new AbortController();
 
@@ -304,8 +325,10 @@ function App() {
             <ul>
               {items.map((exercise) => (
                 <li key={exercise.id}>
-                  {exercise.name} — {exercise.muscleGroup ?? "N/A"} —{" "}
-                  {exercise.equipment ?? "N/A"}
+                  {exercise.name} - {exercise.muscleGroup ?? "N/A"} - {exercise.equipment ?? "N/A"}
+                   <button onClick={() => handleDelete(exercise.id)} disabled={loading} style={{ marginLeft: 8 }}>
+                    Delete
+                    </button>
                 </li>
               ))}
             </ul>
