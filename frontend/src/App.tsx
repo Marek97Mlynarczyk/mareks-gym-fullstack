@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Exercise } from "./types/exercise";
-import { getExercises } from "./api/exercisesApi";
+import { createExercise, getExercises } from "./api/exercisesApi";
 import { useDebouncedValue } from "./hooks/useDebouncedValue";
 
 function App() {
@@ -28,14 +28,66 @@ function App() {
   // I store possible error message if something fails
   const [error, setError] = useState<string | null>(null);
 
+  // I use this to force a reload after create/delete without changing filters
+  const [refreshKey, setRefreshKey] = useState(0);
+
   // I compute total pages from backend totalCount
   const totalPages = useMemo(() => {
     if (totalCount <= 0) return 1;
     return Math.max(1, Math.ceil(totalCount / pageSize));
   }, [totalCount, pageSize]);
 
+  // I decide button enabled/disabled states
   const canGoPrev = page > 1;
   const canGoNext = page < totalPages;
+
+  // I store create form inputs
+  const [newName, setNewName] = useState("");
+  const [newDescription, setNewDescription] = useState("");
+  const [newMuscleGroup, setNewMuscleGroup] = useState("");
+  const [newEquipment, setNewEquipment] = useState("");
+
+  // I store backend validation errors from create
+  const [createErrors, setCreateErrors] = useState<Record<string, string[]> | null>(null);
+
+  // I track create request state so I can disable the button
+  const [creating, setCreating] = useState(false);
+
+  // I create a new exercise using the API and refresh the list
+  async function handleCreate() {
+  try {
+    setCreateErrors(null);
+    setCreating(true);
+
+    await createExercise({
+      name: newName,
+      description: newDescription.trim().length > 0 ? newDescription : null,
+      muscleGroup: newMuscleGroup.trim().length > 0 ? newMuscleGroup : null,
+      equipment: newEquipment.trim().length > 0 ? newEquipment : null,
+    });
+
+    // I reset the form after successful create
+    setNewName("");
+    setNewDescription("");
+    setNewMuscleGroup("");
+    setNewEquipment("");
+
+    setPage(1);
+    setRefreshKey(refreshKey + 1);
+
+  } catch (err) {
+    const maybeErr = err as any;
+    if (maybeErr?.errors) {
+      setCreateErrors(maybeErr.errors as Record<string, string[]>);
+    } else if (maybeErr instanceof Error) {
+      setCreateErrors({ general: [maybeErr.message] });
+    } else {
+      setCreateErrors({ general: ["Unknown error occurred."] });
+    }
+  } finally {
+    setCreating(false);
+  }
+}
 
   // I use useEffect so this runs once when the component loads
     useEffect(() => {
@@ -80,7 +132,7 @@ function App() {
     return () => {
       abortController.abort();
     };
-  }, [debouncedSearch, muscleGroup, equipment, page, pageSize]);
+  }, [debouncedSearch, muscleGroup, equipment, page, pageSize, refreshKey]);
 
   function handleSearchChange(value: string) {
     setSearch(value);
@@ -106,7 +158,7 @@ function App() {
     if (!canGoNext) return;
     setPage((p) => p + 1);
   }
-
+  
   return (
     <div style={{ padding: 24 }}>
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -155,6 +207,77 @@ function App() {
             />
           </div>
         </div>
+
+        <h2 style={{ marginBottom: 12 }}>Create Exercise</h2>
+
+<div
+  style={{
+    display: "flex",
+    gap: 12,
+    flexWrap: "wrap",
+    alignItems: "flex-end",
+    marginBottom: 12,
+  }}
+>
+  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+    <label htmlFor="newName">Name</label>
+    <input
+      id="newName"
+      value={newName}
+      onChange={(e) => setNewName(e.target.value)}
+      placeholder="e.g. Barbell Bench Press"
+      style={{ padding: 8, width: 260 }}
+    />
+  </div>
+
+  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+    <label htmlFor="newMuscleGroup">Muscle group</label>
+    <input
+      id="newMuscleGroup"
+      value={newMuscleGroup}
+      onChange={(e) => setNewMuscleGroup(e.target.value)}
+      placeholder="e.g. Chest"
+      style={{ padding: 8, width: 180 }}
+    />
+  </div>
+
+  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+    <label htmlFor="newEquipment">Equipment</label>
+    <input
+      id="newEquipment"
+      value={newEquipment}
+      onChange={(e) => setNewEquipment(e.target.value)}
+      placeholder="e.g. Barbell"
+      style={{ padding: 8, width: 180 }}
+    />
+  </div>
+
+  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+    <label htmlFor="newDescription">Description</label>
+    <input
+      id="newDescription"
+      value={newDescription}
+      onChange={(e) => setNewDescription(e.target.value)}
+      placeholder="optional"
+      style={{ padding: 8, width: 260 }}
+    />
+  </div>
+
+  <button onClick={handleCreate} disabled={creating || newName.trim().length === 0}>
+    {creating ? "Creating..." : "Create"}
+  </button>
+</div>
+
+{createErrors && (
+  <div style={{ color: "red", marginBottom: 16 }}>
+    {Object.entries(createErrors).map(([field, messages]) => (
+      <div key={field}>
+        <strong>{field}</strong>: {messages.join(", ")}
+      </div>
+    ))}
+  </div>
+)}
+
 
         {/* I show loading only while I'm waiting for the API */}
         {loading && <p>Loading..</p>}

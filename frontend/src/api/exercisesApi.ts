@@ -42,7 +42,7 @@ export type CreateExerciseRequest = {
 export async function createExercise(
   request: CreateExerciseRequest
 ) {
-  return await httpPost<any, CreateExerciseRequest>(
+  return await httpPost<Exercise, CreateExerciseRequest>(
     "/api/exercises",
     request
   );
